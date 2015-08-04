@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            locationURI="toolbar:org.eclipse.ui.main.toolbar">
+         <toolbar
+               id="Model.customization.toolbar">
+            <command
+                  commandId="Model.customization.command.generateREQS"
+                  icon="icons/Test.gif"
+                  label="Generate"
+                  style="push"
+                  tooltip="Click to open requirements generator">
+            </command>
+            <command
+                  commandId="Model.diagram.OpenCommand"
+                  icon="icons/Open.gif"
+                  style="push"
+                  tooltip="Click to open a new file">
+            </command>
+         </toolbar>
+      </menuContribution>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            defaultHandler="imagindata.diagram.commands.generateREQSHandler"
+            id="Model.customization.command.generateREQS"
+            name="generateREQS">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.bindings">
+      <key
+            commandId="Model.customization.command.generateREQS"
+            contextId="org.eclipse.ui.contexts.window"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            sequence="M1+G">
+      </key>
+   </extension>
+
+</plugin>

@@ -1,0 +1,9 @@
+#Thu Jul 08 10:54:53 CEST 2010
+eclipse.preferences.version=1
+gmf_dashboard/domainGenerationModel=platform\:/resource/Model/model/ImaginData.genmodel
+gmf_dashboard/domainModel=platform\:/resource/Model/model/ImaginData.ecore
+gmf_dashboard/generationModel=platform\:/resource/Model/model/ImaginData.gmfgen
+gmf_dashboard/graphicalDefinitionModel=platform\:/resource/Model/model/Imagin.gmfgraph
+gmf_dashboard/mappingModel=platform\:/resource/Model/model/ImaginData.gmfmap
+gmf_dashboard/option_rcp=*
+gmf_dashboard/toolingDefinitionModel=platform\:/resource/Model/model/Imagin.gmftool

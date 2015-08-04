@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ <copyright>
+ </copyright>
+
+ $Id: plugin.xml,v 1.3 2010/08/30 14:47:37 kf288526 Exp $
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="http://imagindata/1.0"
+            class="imagindata.imagindataPackage"
+            genModel="model/ImaginData.genmodel"/>
+   </extension>
+   <extension
+         id="product"
+         point="org.eclipse.core.runtime.products">
+      <product
+            application="Model.diagram.ImaginDataApplication"
+            name="Imagin">
+         <property
+               name="appName"
+               value="Imagin">
+         </property>
+         <property
+               name="windowImages"
+               value="icons/Appli16.gif,icons/Appli32.gif,icons/Appli48.gif,icons/Appli64.gif,icons/Appli128.GIF">
+         </property>
+         <property
+               name="startupForegroundColor"
+               value="FFFFFF">
+         </property>
+         <property
+               name="startupMessageRect"
+               value="11,228,445,20">
+         </property>
+         <property
+               name="startupProgressRect"
+               value="5,249,480,20">
+         </property>
+         <property
+               name="preferenceCustomization"
+               value="plugin_customization.ini">
+         </property>
+      </product>
+   </extension>
+   <extension
+         id="product1"
+         point="org.eclipse.core.runtime.products">
+      <product
+            application="Model.diagram.ImaginDataApplication"
+            name="Imagin">
+         <property
+               name="appName"
+               value="Imagin">
+         </property>
+         <property
+               name="startupProgressRect"
+               value="7,249,480,20">
+         </property>
+         <property
+               name="preferenceCustomization"
+               value="plugin_customization.ini">
+         </property>
+         <property
+               name="startupForegroundColor"
+               value="FFFFFF">
+         </property>
+         <property
+               name="startupMessageRect"
+               value="11,230,445,20">
+         </property>
+      </product>
+   </extension>
+   <!--<extension
+         point="org.eclipse.ui.splashHandlers">
+      <splashHandler
+            class="model.splashHandlers.ExtensibleSplashHandler"
+            id="model.splashHandlers.extensible">
+      </splashHandler>
+   </extension>
+   <extension
+         point="Model.splashExtension">
+      <splashExtension
+            icon="icons/af.png"
+            id="af"
+            tooltip="Application Framework">
+      </splashExtension>
+      <splashExtension
+            icon="icons/embedded.png"
+            id="embedded"
+            tooltip="Embedded">
+      </splashExtension>
+      <splashExtension
+            icon="icons/enterprise.png"
+            id="enterprise"
+            tooltip="Enterprise">
+      </splashExtension>
+      <splashExtension
+            icon="icons/languages.png"
+            id="languages"
+            tooltip="Languages">
+      </splashExtension>
+      <splashExtension
+            icon="icons/rcp.png"
+            id="rcp"
+            tooltip="RCP">
+      </splashExtension>
+   </extension>-->
+
+</plugin>

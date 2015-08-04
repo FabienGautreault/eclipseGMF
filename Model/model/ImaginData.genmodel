@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/Model/src"
+    modelPluginID="Model" modelName="ImaginData" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="6.0" copyrightFields="false">
+  <foreignModel>ImaginData.ecore</foreignModel>
+  <genPackages prefix="imagindata" disposableProviderFactory="true" ecorePackage="ImaginData.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="ImaginData.ecore#//ContitionType">
+      <genEnumLiterals ecoreEnumLiteral="ImaginData.ecore#//ContitionType/Boolean"/>
+      <genEnumLiterals ecoreEnumLiteral="ImaginData.ecore#//ContitionType/Guards"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="ImaginData.ecore#//StateType">
+      <genEnumLiterals ecoreEnumLiteral="ImaginData.ecore#//StateType/Standard"/>
+      <genEnumLiterals ecoreEnumLiteral="ImaginData.ecore#//StateType/Emission"/>
+      <genEnumLiterals ecoreEnumLiteral="ImaginData.ecore#//StateType/Reception"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="ImaginData.ecore#//ExitInitType">
+      <genEnumLiterals ecoreEnumLiteral="ImaginData.ecore#//ExitInitType/Init"/>
+      <genEnumLiterals ecoreEnumLiteral="ImaginData.ecore#//ExitInitType/Exit"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="ImaginData.ecore#//ButtonDefaultState">
+      <genEnumLiterals ecoreEnumLiteral="ImaginData.ecore#//ButtonDefaultState/Invisible"/>
+      <genEnumLiterals ecoreEnumLiteral="ImaginData.ecore#//ButtonDefaultState/Enabled"/>
+      <genEnumLiterals ecoreEnumLiteral="ImaginData.ecore#//ButtonDefaultState/Disabled"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="ImaginData.ecore#//CheckBoxDefaultState">
+      <genEnumLiterals ecoreEnumLiteral="ImaginData.ecore#//CheckBoxDefaultState/Unticked"/>
+      <genEnumLiterals ecoreEnumLiteral="ImaginData.ecore#//CheckBoxDefaultState/Ticked"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="ImaginData.ecore#//ListBoxDefaultState">
+      <genEnumLiterals ecoreEnumLiteral="ImaginData.ecore#//ListBoxDefaultState/Empty"/>
+      <genEnumLiterals ecoreEnumLiteral="ImaginData.ecore#//ListBoxDefaultState/Choice"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="ImaginData.ecore#//EditableFieldDefaultState">
+      <genEnumLiterals ecoreEnumLiteral="ImaginData.ecore#//EditableFieldDefaultState/Empty"/>
+      <genEnumLiterals ecoreEnumLiteral="ImaginData.ecore#//EditableFieldDefaultState/NotEmpty"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="ImaginData.ecore#//AnchorType">
+      <genEnumLiterals ecoreEnumLiteral="ImaginData.ecore#//AnchorType/Entry"/>
+      <genEnumLiterals ecoreEnumLiteral="ImaginData.ecore#//AnchorType/Exit"/>
+    </genEnums>
+    <genClasses ecoreClass="ImaginData.ecore#//Project">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ImaginData.ecore#//Project/objects"/>
+    </genClasses>
+    <genClasses ecoreClass="ImaginData.ecore#//InterfaceContainer">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ImaginData.ecore#//InterfaceContainer/diagrams"/>
+    </genClasses>
+    <genClasses ecoreClass="ImaginData.ecore#//Region">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference ImaginData.ecore#//Region/diagram"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ImaginData.ecore#//Region/stateObjects"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ImaginData.ecore#//Region/transitions"/>
+    </genClasses>
+    <genClasses ecoreClass="ImaginData.ecore#//InterruptibleRegion">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ImaginData.ecore#//InterruptibleRegion/Name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ImaginData.ecore#//InterruptibleRegion/InterruptState"/>
+    </genClasses>
+    <genClasses ecoreClass="ImaginData.ecore#//Diagram">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ImaginData.ecore#//Diagram/Name"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference ImaginData.ecore#//Diagram/IContainer"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ImaginData.ecore#//Diagram/regions"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ImaginData.ecore#//Diagram/histo"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ImaginData.ecore#//Diagram/Anchors"/>
+    </genClasses>
+    <genClasses ecoreClass="ImaginData.ecore#//Historic">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ImaginData.ecore#//Historic/Subdiagram"/>
+    </genClasses>
+    <genClasses ecoreClass="ImaginData.ecore#//Object">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference ImaginData.ecore#//Object/project"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ImaginData.ecore#//Object/Signal"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ImaginData.ecore#//Object/Name"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference ImaginData.ecore#//Object/stateobject"/>
+    </genClasses>
+    <genClasses ecoreClass="ImaginData.ecore#//Signal">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ImaginData.ecore#//Signal/Name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ImaginData.ecore#//Signal/object"/>
+    </genClasses>
+    <genClasses ecoreClass="ImaginData.ecore#//Button">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ImaginData.ecore#//Button/State"/>
+    </genClasses>
+    <genClasses ecoreClass="ImaginData.ecore#//CheckBox">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ImaginData.ecore#//CheckBox/State"/>
+    </genClasses>
+    <genClasses ecoreClass="ImaginData.ecore#//ProgressBar">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ImaginData.ecore#//ProgressBar/Standard"/>
+    </genClasses>
+    <genClasses ecoreClass="ImaginData.ecore#//ListBox">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ImaginData.ecore#//ListBox/State"/>
+    </genClasses>
+    <genClasses ecoreClass="ImaginData.ecore#//StateObject">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference ImaginData.ecore#//StateObject/region"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ImaginData.ecore#//StateObject/Exit"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ImaginData.ecore#//StateObject/Enter"/>
+    </genClasses>
+    <genClasses ecoreClass="ImaginData.ecore#//Transition">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ImaginData.ecore#//Transition/Start"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ImaginData.ecore#//Transition/End"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ImaginData.ecore#//Transition/Signal"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ImaginData.ecore#//Transition/Guard"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ImaginData.ecore#//Transition/Effect"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference ImaginData.ecore#//Transition/region"/>
+    </genClasses>
+    <genClasses ecoreClass="ImaginData.ecore#//State">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ImaginData.ecore#//State/Name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ImaginData.ecore#//State/Type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ImaginData.ecore#//State/ExterneSignal"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ImaginData.ecore#//State/objects"/>
+    </genClasses>
+    <genClasses ecoreClass="ImaginData.ecore#//InitExit">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ImaginData.ecore#//InitExit/DiagramName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ImaginData.ecore#//InitExit/Type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ImaginData.ecore#//InitExit/Transition"/>
+    </genClasses>
+    <genClasses ecoreClass="ImaginData.ecore#//Condition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ImaginData.ecore#//Condition/Condition"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ImaginData.ecore#//Condition/Type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ImaginData.ecore#//Condition/Description"/>
+    </genClasses>
+    <genClasses ecoreClass="ImaginData.ecore#//EditableField">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ImaginData.ecore#//EditableField/State"/>
+    </genClasses>
+    <genClasses ecoreClass="ImaginData.ecore#//Anchor">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ImaginData.ecore#//Anchor/Transition"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference ImaginData.ecore#//Anchor/Diagram"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ImaginData.ecore#//Anchor/Type"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

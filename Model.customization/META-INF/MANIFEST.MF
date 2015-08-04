@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Customization
+Bundle-SymbolicName: Model.customization;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: model.customization.Activator
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ Model;bundle-version="1.0.0",
+ G_n_rateur;bundle-version="1.0.0"
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Export-Package: imagindata.diagram.dialog
+Import-Package: org.eclipse.draw2d

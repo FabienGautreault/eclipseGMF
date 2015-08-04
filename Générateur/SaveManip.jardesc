@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="WINDOWS-1252" standalone="no"?>
+<jardesc>
+    <jar path="C:/Documents and Settings/kf288526/Bureau/RequirementsGenerator.jar"/>
+    <options buildIfNeeded="true" compress="true" descriptionLocation="/Générateur de req/SaveManip.jardesc" exportErrors="true" exportWarnings="true" includeDirectoryEntries="false" overwrite="false" saveDescription="true" storeRefactorings="false" useSourceFolders="false"/>
+    <storedRefactorings deprecationInfo="true" structuralOnly="false"/>
+    <selectedProjects/>
+    <manifest generateManifest="false" manifestLocation="/Générateur de req/MANIFEST.MF" manifestVersion="1.0" reuseManifest="false" saveManifest="true" usesManifest="true">
+        <sealing sealJar="true">
+            <packagesToSeal/>
+            <packagesToUnSeal/>
+        </sealing>
+    </manifest>
+    <selectedElements exportClassFiles="true" exportJavaFiles="false" exportOutputFolder="false">
+        <folder path="/Générateur de req/FichiersWord"/>
+        <folder path="/Générateur de req/FichiersExcel"/>
+        <folder path="/Générateur de req/fonts"/>
+        <folder path="/Générateur de req/img"/>
+        <folder path="/Générateur de req/FichiersPDE"/>
+        <javaElement handleIdentifier="=Générateur de req/src"/>
+    </selectedElements>
+</jardesc>

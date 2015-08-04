@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="imagindata"
+    nsURI="http://imagindata/1.0" nsPrefix="imagindata">
+  <eClassifiers xsi:type="ecore:EClass" name="Project" eSuperTypes="#//InterfaceContainer">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="objects" upperBound="-1"
+        eType="#//Object" containment="true" eOpposite="#//Object/project"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="InterfaceContainer">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="diagrams" upperBound="-1"
+        eType="#//Diagram" containment="true" eOpposite="#//Diagram/IContainer"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Region" eSuperTypes="#//InterfaceContainer">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="diagram" lowerBound="1"
+        eType="#//Diagram" eOpposite="#//Diagram/regions"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="stateObjects" upperBound="-1"
+        eType="#//StateObject" containment="true" eOpposite="#//StateObject/region"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="transitions" upperBound="-1"
+        eType="#//Transition" containment="true" eOpposite="#//Transition/region"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="InterruptibleRegion" eSuperTypes="#//Region">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="InterruptState" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Diagram" eSuperTypes="#//StateObject">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="IContainer" lowerBound="1"
+        eType="#//InterfaceContainer" eOpposite="#//InterfaceContainer/diagrams"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="regions" lowerBound="1"
+        upperBound="-1" eType="#//Region" containment="true" eOpposite="#//Region/diagram"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="histo" eType="#//Historic"
+        containment="true" eOpposite="#//Historic/Subdiagram"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Anchors" upperBound="-1"
+        eType="#//Anchor" containment="true" eOpposite="#//Anchor/Diagram"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Historic" eSuperTypes="#//StateObject">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Subdiagram" lowerBound="1"
+        eType="#//Diagram" eOpposite="#//Diagram/histo"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Object">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="project" lowerBound="1"
+        eType="#//Project" eOpposite="#//Project/objects"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Signal" upperBound="-1"
+        eType="#//Signal" eOpposite="#//Signal/object"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="stateobject" lowerBound="1"
+        eType="#//State" eOpposite="#//State/objects"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Signal">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="object" lowerBound="1"
+        eType="#//Object" eOpposite="#//Object/Signal"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Button" eSuperTypes="#//Object">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="State" eType="#//ButtonDefaultState"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CheckBox" eSuperTypes="#//Object">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="State" eType="#//CheckBoxDefaultState"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ProgressBar" eSuperTypes="#//Object">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Standard" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ListBox" eSuperTypes="#//Object">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="State" eType="#//ListBoxDefaultState"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="StateObject">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="region" lowerBound="1"
+        eType="#//Region" eOpposite="#//Region/stateObjects"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Exit" upperBound="-1" eType="#//Transition"
+        eOpposite="#//Transition/Start"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Enter" upperBound="-1"
+        eType="#//Transition" eOpposite="#//Transition/End"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Transition">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Start" lowerBound="1" eType="#//StateObject"
+        eOpposite="#//StateObject/Exit"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="End" lowerBound="1" eType="#//StateObject"
+        eOpposite="#//StateObject/Enter"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Signal" ordered="false"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Guard" ordered="false"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Effect" ordered="false"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="region" lowerBound="1"
+        eType="#//Region" eOpposite="#//Region/transitions"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="State" eSuperTypes="#//StateObject">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Type" eType="#//StateType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ExterneSignal" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="objects" upperBound="-1"
+        eType="#//Object" containment="true" eOpposite="#//Object/stateobject"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="InitExit" eSuperTypes="#//StateObject">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="DiagramName" ordered="false"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Type" ordered="false" eType="#//ExitInitType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Transition" ordered="false"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Condition" eSuperTypes="#//StateObject">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Condition" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Type" eType="#//ContitionType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EditableField" eSuperTypes="#//Object">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="State" eType="#//EditableFieldDefaultState"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="ContitionType">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="baseType" value="http://www.eclipse.org/emf/2002/Ecore#EEnumerator"/>
+    </eAnnotations>
+    <eLiterals name="Boolean"/>
+    <eLiterals name="Guards" value="1"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="StateType">
+    <eLiterals name="Standard"/>
+    <eLiterals name="Emission" value="1"/>
+    <eLiterals name="Reception" value="2"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="ExitInitType">
+    <eLiterals name="Init"/>
+    <eLiterals name="Exit" value="1"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="ButtonDefaultState">
+    <eLiterals name="Invisible"/>
+    <eLiterals name="Enabled" value="1"/>
+    <eLiterals name="Disabled" value="2"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="CheckBoxDefaultState">
+    <eLiterals name="Unticked"/>
+    <eLiterals name="Ticked" value="1"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="ListBoxDefaultState">
+    <eLiterals name="Empty"/>
+    <eLiterals name="Choice" value="1"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="EditableFieldDefaultState">
+    <eLiterals name="Empty"/>
+    <eLiterals name="NotEmpty" value="1"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Anchor" eSuperTypes="#//StateObject">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Transition" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Diagram" lowerBound="1"
+        eType="#//Diagram" eOpposite="#//Diagram/Anchors"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Type" eType="#//AnchorType"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="AnchorType">
+    <eLiterals name="Entry"/>
+    <eLiterals name="Exit" value="1"/>
+  </eClassifiers>
+</ecore:EPackage>
