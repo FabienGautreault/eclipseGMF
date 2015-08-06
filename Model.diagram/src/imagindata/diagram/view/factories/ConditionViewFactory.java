@@ -4,7 +4,7 @@ import imagindata.diagram.edit.parts.ConditionEditPart;
 import imagindata.diagram.part.ImaginDataDiagramEditorPlugin;
 import imagindata.diagram.part.ImaginDataVisualIDRegistry;
 
-import org.eclipse.gmf.runtime.lite.preferences.IPreferenceConstants;
+import org.eclipse.gmf.runtime.diagram.ui.preferences.IPreferenceConstants;
 import org.eclipse.gmf.runtime.lite.services.IViewDecorator;
 import org.eclipse.gmf.runtime.notation.FontStyle;
 import org.eclipse.gmf.runtime.notation.Node;
@@ -37,14 +37,14 @@ public class ConditionViewFactory implements IViewDecorator {
 		FontData defaultFontData = PreferenceConverter.getFontData(
 				ImaginDataDiagramEditorPlugin.getInstance()
 						.getPreferenceStore(),
-				IPreferenceConstants.DEFAULT_FONT);
+				IPreferenceConstants.PREF_DEFAULT_FONT);
 		fontStyle.setFontName(defaultFontData.getName());
 		fontStyle.setFontHeight(defaultFontData.getHeight());
 		fontStyle.setBold((defaultFontData.getStyle() & SWT.BOLD) != 0);
 		fontStyle.setItalic((defaultFontData.getStyle() & SWT.ITALIC) != 0);
 		org.eclipse.swt.graphics.RGB defaultFontColor = PreferenceConverter
 				.getColor(ImaginDataDiagramEditorPlugin.getInstance()
-						.getPreferenceStore(), IPreferenceConstants.FONT_COLOR);
+						.getPreferenceStore(), IPreferenceConstants.PREF_FONT_COLOR);
 		fontStyle.setFontColor((defaultFontColor.blue << 16)
 				| (defaultFontColor.green << 8) | defaultFontColor.red);
 		view.getStyles().add(fontStyle);

@@ -1,6 +1,5 @@
 package imagindata.diagram.part;
 
-import imagindata.Anchor;
 import imagindata.diagram.edit.parts.Anchor2EditPart;
 import imagindata.diagram.edit.parts.AnchorEditPart;
 import imagindata.diagram.edit.parts.ConditionConditionEditPart;
@@ -20,8 +19,6 @@ import imagindata.diagram.edit.parts.TransitionEffectEditPart;
 import imagindata.diagram.edit.parts.TransitionGuardEditPart;
 import imagindata.diagram.edit.parts.TransitionSignalEditPart;
 
-import imagindata.diagram.expressions.ImaginDataAbstractExpression;
-import imagindata.diagram.expressions.ImaginDataOCLFactory;
 import org.eclipse.core.runtime.Platform;
 import org.eclipse.emf.ecore.EAnnotation;
 import org.eclipse.emf.ecore.EObject;

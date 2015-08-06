@@ -5,17 +5,17 @@ import org.eclipse.emf.transaction.TransactionalEditingDomain;
 import org.eclipse.emf.transaction.util.TransactionUtil;
 import org.eclipse.gef.commands.Command;
 import org.eclipse.gef.commands.UnexecutableCommand;
+import org.eclipse.gef.editpolicies.ComponentEditPolicy;
 import org.eclipse.gef.requests.GroupRequest;
 import org.eclipse.gmf.runtime.lite.commands.DestroyElementCommand;
 import org.eclipse.gmf.runtime.lite.commands.RemoveNotationalEdgeCommand;
 import org.eclipse.gmf.runtime.lite.commands.WrappingCommand;
-import org.eclipse.gmf.runtime.lite.edit.policies.ComponentEditPolicyEx;
 import org.eclipse.gmf.runtime.notation.Edge;
 
 /**
  * @generated
  */
-public class TransitionComponentEditPolicy extends ComponentEditPolicyEx {
+public class TransitionComponentEditPolicy extends ComponentEditPolicy {
 	/**
 	 * @generated
 	 */

@@ -5,7 +5,6 @@ import imagindata.StateObject;
 import imagindata.Transition;
 import imagindata.diagram.edit.policies.ImaginDataBaseItemSemanticEditPolicy;
 import imagindata.diagram.providers.ImaginDataElementTypes;
-import imagindata.impl.InitExitImpl;
 
 import org.eclipse.core.commands.ExecutionException;
 import org.eclipse.core.runtime.IAdaptable;

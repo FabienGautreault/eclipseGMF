@@ -1,6 +1,5 @@
 package imagindata.diagram.sheet;
 
-import imagindata.diagram.part.ImaginDataDiagramEditorPlugin;
 import java.util.ArrayList;
 import java.util.Iterator;
 

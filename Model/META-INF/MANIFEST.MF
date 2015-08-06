@@ -9,13 +9,16 @@ Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Export-Package: imagindata,
  imagindata.impl,
- imagindata.util
+ imagindata.util,
+ org.eclipse.gmf.runtime.lite.commands,
+ org.eclipse.gmf.runtime.lite.requests
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.emf.validation.ocl;bundle-version="1.3.0",
- org.eclipse.gmf.runtime.lite.svg;bundle-version="1.0.0",
  org.eclipse.ui.ide;bundle-version="3.5.1",
- org.eclipse.rcp;bundle-version="3.5.0"
+ org.eclipse.rcp;bundle-version="3.5.0",
+ org.apache.batik.util;bundle-version="1.7.0",
+ org.apache.batik.util.gui;bundle-version="1.6.0"
 Bundle-ActivationPolicy: lazy
 Bundle-Activator: imagindata.Activator
 Import-Package: org.eclipse.emf.ecore.xmi.impl

@@ -2,8 +2,8 @@ package imagindata.diagram.edit.commands;
 
 import imagindata.InitExit;
 import imagindata.Region;
-
 import imagindata.diagram.providers.ImaginDataElementTypes;
+
 import org.eclipse.core.commands.ExecutionException;
 import org.eclipse.core.runtime.IAdaptable;
 import org.eclipse.core.runtime.IProgressMonitor;

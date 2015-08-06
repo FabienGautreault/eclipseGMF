@@ -1,8 +1,6 @@
 package imagindata.diagram.application;
 
 import imagindata.diagram.part.ImaginDataCreationWizard;
-import imagindata.diagram.part.ImaginDataDiagramEditorPlugin;
-import imagindata.diagram.part.ImaginDataDiagramEditorUtil;
 import imagindata.diagram.part.Messages;
 
 import java.io.File;
@@ -29,7 +27,6 @@ import org.eclipse.jface.wizard.WizardDialog;
 import org.eclipse.osgi.util.NLS;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.FileDialog;
-import org.eclipse.ui.IActionDelegate;
 import org.eclipse.ui.IEditorDescriptor;
 import org.eclipse.ui.IWorkbench;
 import org.eclipse.ui.IWorkbenchActionConstants;

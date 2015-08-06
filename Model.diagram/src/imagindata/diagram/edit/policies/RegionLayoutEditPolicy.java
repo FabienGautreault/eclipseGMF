@@ -16,7 +16,6 @@ import imagindata.diagram.edit.parts.ConditionEditPart;
 import imagindata.diagram.edit.parts.Diagram2EditPart;
 import imagindata.diagram.edit.parts.DiagramEditPart;
 import imagindata.diagram.edit.parts.InitExitEditPart;
-import imagindata.diagram.edit.parts.RegionEditPart;
 import imagindata.diagram.edit.parts.StateEditPart;
 import imagindata.diagram.part.ImaginDataVisualIDRegistry;
 
@@ -28,7 +27,6 @@ import org.eclipse.emf.transaction.TransactionalEditingDomain;
 import org.eclipse.emf.transaction.util.TransactionUtil;
 import org.eclipse.gef.EditPart;
 import org.eclipse.gef.commands.Command;
-import org.eclipse.gef.requests.ChangeBoundsRequest;
 import org.eclipse.gef.requests.CreateRequest;
 import org.eclipse.gmf.runtime.lite.commands.WrappingCommand;
 import org.eclipse.gmf.runtime.lite.edit.policies.XYLayoutEditPolicyEx;

@@ -1,9 +1,5 @@
 package imagindata.diagram.edit.commands;
 
-import java.lang.reflect.InvocationTargetException;
-
-import javax.swing.SwingUtilities;
-
 import imagindata.Button;
 import imagindata.CheckBox;
 import imagindata.EditableField;
@@ -11,8 +7,12 @@ import imagindata.ListBox;
 import imagindata.Object;
 import imagindata.ProgressBar;
 import imagindata.State;
+import imagindata.diagram.dialog.ObjectPropertiesPanel;
 import imagindata.diagram.providers.ImaginDataElementTypes;
-import imagindata.diagram.dialog.*;
+
+import java.lang.reflect.InvocationTargetException;
+
+import javax.swing.SwingUtilities;
 
 import org.eclipse.core.commands.ExecutionException;
 import org.eclipse.core.runtime.IAdaptable;

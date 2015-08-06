@@ -5,11 +5,11 @@ import org.eclipse.emf.transaction.TransactionalEditingDomain;
 import org.eclipse.emf.transaction.util.TransactionUtil;
 import org.eclipse.gef.commands.Command;
 import org.eclipse.gef.commands.UnexecutableCommand;
+import org.eclipse.gef.editpolicies.ComponentEditPolicy;
 import org.eclipse.gef.requests.GroupRequest;
 import org.eclipse.gmf.runtime.lite.commands.DestroyElementCommand;
 import org.eclipse.gmf.runtime.lite.commands.RemoveNotationalElementCommand;
 import org.eclipse.gmf.runtime.lite.commands.WrappingCommand;
-import org.eclipse.gmf.runtime.lite.edit.policies.ComponentEditPolicyEx;
 import org.eclipse.gmf.runtime.notation.CanonicalStyle;
 import org.eclipse.gmf.runtime.notation.Node;
 import org.eclipse.gmf.runtime.notation.NotationPackage;
@@ -18,7 +18,7 @@ import org.eclipse.gmf.runtime.notation.View;
 /**
  * @generated
  */
-public class ObjectComponentEditPolicy extends ComponentEditPolicyEx {
+public class ObjectComponentEditPolicy extends ComponentEditPolicy {
 	/**
 	 * @generated
 	 */

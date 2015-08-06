@@ -26,7 +26,7 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.gmf.runtime.diagram.ui.resources.editor,
  org.eclipse.draw2d;visibility:=reexport,
  org.eclipse.gmf.runtime.draw2d.ui;visibility:=reexport,
- Model;visibility:=reexport;bundle-version="1.0.0",
+ Model;bundle-version="1.0.0";visibility:=reexport,
  org.eclipse.ocl.ecore;visibility:=reexport,
  org.eclipse.emf.validation;visibility:=reexport,
  org.eclipse.emf.validation.ocl;visibility:=reexport,
@@ -36,12 +36,12 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.ui.workbench,
  org.eclipse.emf.workspace,
  org.eclipse.gmf.runtime.notation,
- org.eclipse.gmf.runtime.lite;bundle-version="1.0.0",
  Model.edit;bundle-version="1.0.0",
  org.eclipse.core.runtime.compatibility;bundle-version="3.2.0",
- org.eclipse.core.runtime.compatibility.auth;bundle-version="3.2.100",
  Model.customization;bundle-version="1.0.0",
- Model.editor;bundle-version="1.0.0"
+ Model.editor;bundle-version="1.0.0",
+ org.apache.batik.util;bundle-version="1.7.0",
+ org.apache.batik.util.gui;bundle-version="1.7.0"
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Eclipse-LazyStart: true

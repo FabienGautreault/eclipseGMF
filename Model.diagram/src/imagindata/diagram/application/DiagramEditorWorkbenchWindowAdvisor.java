@@ -1,6 +1,5 @@
 package imagindata.diagram.application;
 
-import imagindata.diagram.part.ImaginDataDiagramEditorPlugin;
 import imagindata.diagram.part.Messages;
 
 import org.eclipse.swt.graphics.Point;

@@ -1,6 +1,5 @@
 package imagindata.diagram.providers;
 
-import imagindata.State;
 import imagindata.diagram.edit.parts.Anchor2EditPart;
 import imagindata.diagram.edit.parts.AnchorEditPart;
 import imagindata.diagram.edit.parts.ConditionEditPart;
@@ -20,7 +19,6 @@ import java.util.Map;
 import java.util.Set;
 
 import org.eclipse.core.runtime.IAdaptable;
-import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EClassifier;
 import org.eclipse.emf.ecore.ENamedElement;

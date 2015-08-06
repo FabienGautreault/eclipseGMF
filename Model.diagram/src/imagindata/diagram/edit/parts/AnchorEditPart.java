@@ -2,7 +2,6 @@ package imagindata.diagram.edit.parts;
 
 import imagindata.Activator;
 import imagindata.Anchor;
-import imagindata.InitExit;
 import imagindata.diagram.edit.policies.AnchorItemSemanticEditPolicy;
 import imagindata.diagram.providers.ImaginDataElementTypes;
 
@@ -14,7 +13,6 @@ import org.eclipse.core.runtime.FileLocator;
 import org.eclipse.core.runtime.Path;
 import org.eclipse.draw2d.IFigure;
 import org.eclipse.draw2d.PositionConstants;
-import org.eclipse.draw2d.RectangleFigure;
 import org.eclipse.draw2d.Shape;
 import org.eclipse.draw2d.StackLayout;
 import org.eclipse.draw2d.geometry.PointList;
